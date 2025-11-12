@@ -4,58 +4,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Инфолайн</title>
+    <link rel="stylesheet" href="fonts/fonts.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
     <div class="wrapper">
+        <!-- Шапка страницы -->
         <header class="header">
-            <div class="conteiner">
+            <div class="container">
+                <!-- Создали блок menu так как на мобильнике весь этот блок бюдет полноэкранным меню -->
                 <div class="menu">
+                    <!-- Логотип всегда делаем ссылкой -->
                     <a href="#" class="logo">
-                        <img src="img\logo-infoline.svg" alt="">
+                        <!-- Логотип добавляем изображением, так как если не подключаться фирменные шрифты то теряется смысл логотипа -->
+                        <img src="images/icons/logo-infoline.svg" alt="">
                     </a>
-                    <nav class="nav">
-                        <ul class="nav_list">
-                            <li class="nav_item">
-                                <a href="" class="nav_link">Главная</a>
+                    <nav class="nav header__nav">
+                        <ul class="nav__list">
+                            <li class="nav__item">
+                                <a href="" class="nav__link">Главная</a>
                             </li>
-                            <li class="nav_item">
-                                <a href="" class="nav_link">Аренда</a>
+                            <li class="nav__item">
+                                <a href="" class="nav__link">Аренда</a>
                             </li>
-                            <li class="nav_item">
-                                <a href="" class="nav_link">Услуги</a>
+                            <li class="nav__item">
+                                <a href="" class="nav__link">Услуги</a>
                             </li>
-                            <li class="nav_item">
-                                <a href="" class="nav_link">Контакты</a>
+                            <li class="nav__item">
+                                <a href="" class="nav__link">Контакты</a>
                             </li>
                         </ul>
                     </nav>
-                    <nav class="nav-num">
-                        <a href="#" class="tel-num"><span class="num">8(3452)</span>388-000</a>
-                        <img src="img\tel.svg" alt="">
-                    </nav>
+                    <a href="tel:+73452388000" class="phone"><span>8 (3452)</span>388-000</a>
                 </div>
             </div>
         </header>
-        <footer>
-            <div class="text">
-                <ul class="texr_list">
-                    <li class="gps">
+        <section class="hero">
+            <div class="conteiner hero__conteiner">
+                <div class="hero__content">
+                    <div class="gps">
                         <a href="#" class="gps_link">ул. республики, 61</a>
-                    </li>
-                    <li class="biz">
-                        <div>бизнес-центр в тюмени</div>
-                    </li>
-                    <li class="button">
-                        <button>заказать звонок</button>
-                    </li>
-                </ul>
+                    </div>
+                    <h1 class="title">
+                        <span>бизнес-центр</span>
+                        <span>в тюмени</span>
+                    </h1>
+                    <div class="hero__btns">
+                        <button class="btn btn--blue btn--large">заказать звонок</button>
+                        <a href="#" class="btn btn--outline btn--small">аренда площади</a>
+                    </div>
+                </div>
+
+                <div class="hero__img-wrap">
+                    <img src="images/bg/vertical-shot-white-building-clear-sky.png" alt="" class="hero__img" width="420"
+                        height="550">
+                </div>
             </div>
-            <div class="img">
-                <img src="img/vertical-shot-white-building-clear-sky.png" alt="">
-            </div>
-        </footer>
+        </section>
     </div>
 </body>
 
