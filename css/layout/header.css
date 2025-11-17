@@ -4,28 +4,24 @@
     color: #fff;
 }
 
-.menu {
+.menu__container {
     display: flex;
     justify-content: space-between;
-}
-
-.logo {
-    display: block;
+    column-gap: 10px;
 }
 
 .nav {}
 
-.nav__list {
-    display: flex;
-    column-gap: 30px;
-
-}
-
 .header__nav {
-    background-color: #404f59;
+    background-color: #404F59;
     border-radius: 0 0 10px 10px;
     padding: 20px 40px;
     margin-top: -29px;
+}
+
+.nav__list {
+    display: flex;
+    column-gap: 30px;
 }
 
 .nav__item {}
@@ -42,9 +38,10 @@
     display: flex;
     column-gap: 10px;
     align-items: center;
+    white-space: nowrap;
 }
 
-.phone:before {
+.phone::before {
     content: "";
     display: block;
     width: 24px;

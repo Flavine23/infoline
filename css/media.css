@@ -1,0 +1,9 @@
+@media (max-width: 830px) {
+    .header__nav {
+        display: none;
+    }
+
+    .phone {
+        display: none;
+    }
+}

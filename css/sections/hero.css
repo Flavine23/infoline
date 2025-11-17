@@ -1,66 +1,102 @@
 .hero {
-    background-color: #2c3b45;
-    padding-top: 56px;
-    border-bottom: 50px solid #1e92e7;
+    background-color: #2C3B45;
+    padding-top: 71px;
+    border-bottom: 50px solid #1E92E7;
 }
 
-.conteiner {}
-
-.hero__conteiner {
+.hero__container {
     display: flex;
     justify-content: space-between;
 }
 
 .hero__content {
+    /* 602/1180 (Ширина блока/Ширина контейнера) */
     flex: 1 0 51%;
-    padding-top: 7.8%;
+    /* 92/1260*100 = 7,3vw */
+    padding-top: clamp(46px, 7.3vw, 92px);
     padding-bottom: clamp(100px, 15.9vw, 200px);
 }
 
-.gps {}
-
-.gps_link {
+.address {
     font-family: 'Montserrat';
     font-style: normal;
-    font-weight: bold;
+    font-weight: 700;
+    text-transform: uppercase;
     color: #1E92E7;
+    margin-bottom: 35px;
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+}
+
+.address::before {
+    content: "";
+    width: 25px;
+    height: 25px;
+    display: block;
+    background-image: url(../../images/icons/clarity_map-marker-solid.svg);
 }
 
 .title {
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 500;
-    text-transform: uppercase;
-    color: #FFF;
-}
-
-.hero__btns {}
-
-.btn {
-    font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: 600;
-    text-align: center;
+    /* Размер текста зависит от ширины области просмотра 56/1260 = 0,44444 */
+    font-size: clamp(31px, 4.44vw, 56px);
+    line-height: 120%;
     text-transform: uppercase;
     color: #FFFFFF;
-
-    border-radius: 5px;
-    width: 244px;
-    height: 50px;
-
-    background-color: #1E92E7;
+    margin-bottom: 47px;
 }
 
-.btn--blue {}
+.hero__btns {
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+    align-items: flex-start;
+}
 
-.btn--large {}
+.hero__btns .btn {
+    min-width: 244px;
+}
 
-.btn--outline {}
-
-.btn--small {}
+.hero__btns .btn:nth-child(2) {
+    display: none;
+}
 
 .hero__img-wrap {
     flex: 1 0 49%;
+    text-align: center;
+    position: relative;
 }
 
-.hero__img {}
+.hero__img {
+    height: 100%;
+    object-fit: contain;
+    object-position: bottom center;
+    position: relative;
+    z-index: 10;
+}
+
+.hero__img-wrap::before,
+.hero__img-wrap::after {
+    content: "";
+    display: block;
+    height: 100%;
+    width: 100vw;
+    border-radius: 5px 0 0 0;
+    position: absolute;
+}
+
+.hero__img-wrap::before {
+    background-image: url(../../images/bg/sky.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 5;
+}
+
+.hero__img-wrap::after {
+    background-color: #404f59;
+    top: -15px;
+    left: 30px;
+}
