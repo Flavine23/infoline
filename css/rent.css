@@ -74,6 +74,18 @@
 .card__detail {
     display: flex;
     justify-content: space-between;
+    /* Площадь */
+    /* Площадь */
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%;
+    /* or 19px */
+
+    color: #000000;
+
+    margin-bottom: 15px;
 }
 
 .card__lable {
