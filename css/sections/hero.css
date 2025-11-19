@@ -47,6 +47,8 @@
     text-transform: uppercase;
     color: #FFFFFF;
     margin-bottom: 47px;
+    display: flex;
+    flex-direction: column;
 }
 
 .hero__btns {
@@ -76,6 +78,7 @@
     object-position: bottom center;
     position: relative;
     z-index: 10;
+    line-height: 0px;
 }
 
 .hero__img-wrap::before,
@@ -86,6 +89,8 @@
     width: 100vw;
     border-radius: 5px 0 0 0;
     position: absolute;
+    top: 0;
+    left: 0;
 }
 
 .hero__img-wrap::before {

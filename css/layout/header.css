@@ -54,3 +54,12 @@
 .phone span {
     color: rgba(255, 255, 255, 0.4);
 }
+
+.burger {
+    display: none;
+    flex-shrink: 0;
+}
+
+.burger__icon--close {
+    display: none;
+}
